@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A0E12">
+<title>BMS Electric, allumez</title>
+<link rel="preload" href="../assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/courant.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='10' width='80' height='80' rx='18' fill='%230A0E12'/><rect x='34' y='30' width='32' height='40' rx='5' fill='%23FFC872'/></svg>">
+</head>
+<body>
+
+<div class="bar">
+  <a class="brand" href="#top">BMS</a>
+  <button class="son" aria-pressed="true" title="Activer ou couper le son"><i></i><span>Son activé</span></button>
+</div>
+
+<div class="cable" aria-hidden="true">
+  <svg viewBox="0 0 16 1000" preserveAspectRatio="none">
+    <line class="gaine" x1="3" y1="0" x2="3" y2="1000" stroke-width="2.4" vector-effect="non-scaling-stroke"/>
+    <line class="gaine" x1="8" y1="0" x2="8" y2="1000" stroke-width="2.4" vector-effect="non-scaling-stroke"/>
+    <line class="gaine" x1="13" y1="0" x2="13" y2="1000" stroke-width="2.4" vector-effect="non-scaling-stroke"/>
+    <line class="flow" x1="3" y1="0" x2="3" y2="1000" stroke="#A65A2E" stroke-width="2.4" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+    <line class="flow" x1="8" y1="0" x2="8" y2="1000" stroke="#3471BD" stroke-width="2.4" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+    <line class="flow" x1="13" y1="0" x2="13" y2="1000" stroke="#3E9442" stroke-width="2.4" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+  </svg>
+  <div class="electron-dot" style="position:absolute;left:0;width:16px;height:16px;margin-top:-8px;top:0;border-radius:50%;background:radial-gradient(circle,#fff 0 20%,#FFC872 45%,rgba(255,200,114,0) 72%);opacity:0;transition:opacity .4s"></div>
+</div>
+
+<main id="top">
+<section class="scene">
+  <div class="halo"></div>
+  <svg class="lampe" viewBox="0 0 120 150" aria-hidden="true">
+    <line class="fil-l" x1="60" y1="0" x2="60" y2="88" stroke-width="2"/>
+    <path d="M44 88 h32 v10 h-32z" fill="#3A4047"/>
+    <circle class="bulbe" cx="60" cy="116" r="18"/>
+  </svg>
+  <div class="scene-inner">
+    <button class="big-switch" aria-pressed="false" aria-label="Allumer la lumière"></button>
+    <p class="cue" aria-live="polite">Appuyez pour allumer</p>
+    <h1 class="titre" aria-live="polite"></h1>
+    <p class="sous">BMS Electric, fabricant algérien d’interrupteurs, de prises, de disjoncteurs et d’éclairage LED. Usine à Birkhadem, Alger.</p>
+    <p class="scroll-cue">Suivez le fil</p>
+  </div>
+</section>
+
+<section class="zone" id="composer">
+  <div class="wrap">
+    <div class="tete">
+      <h2>Composez votre plaque</h2>
+      <p class="lead">Choisissez une gamme et un mécanisme, puis appuyez sur la plaque pour l’essayer.</p>
+    </div>
+    <div class="composer">
+      <div class="atelier" role="button" tabindex="0" aria-label="Essayer la plaque">
+        <div class="lueur"></div>
+        <div class="vue"></div>
+        <p class="etat">Éteint</p>
+      </div>
+      <div class="reglages">
+        <div><h3>Gamme</h3><div class="chips" data-group="gamme"></div></div>
+        <div><h3>Mécanisme</h3><div class="chips" data-group="mech"></div></div>
+        <div class="couleurs" hidden><h3>Couleur du cadre</h3><div class="swatches"></div><p style="margin:12px 0 0"><span class="avalider">Coloris à valider par l’administration de BMS Electric</span></p></div>
+        <p class="ref" aria-live="polite"></p>
+        <p style="margin:0;color:var(--doux);font-size:13px">Visuels d’illustration, remplacés par les photos produits BMS.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="tableau">
+  <div class="wrap">
+    <div class="tete">
+      <h2>Un circuit, un disjoncteur</h2>
+      <p class="lead">Coupez un circuit et regardez la maison réagir. Appuyez sur le bouton T pour tester le différentiel, puis réarmez-le.</p>
+    </div>
+    <div class="tableau-wrap">
+      <div class="maison">
+        <svg viewBox="0 0 360 280" role="img" aria-label="Maison alimentée par le tableau électrique">
+          <polygon points="18,102 180,22 342,102" fill="#1B2127"/>
+          <rect x="30" y="100" width="300" height="170" fill="#151A1F" stroke="#2A3138" stroke-width="2"/>
+          <rect class="piece c-ecl" x="32" y="102" width="146" height="81" fill="#181D22"/>
+          <rect class="piece c-ecl" x="182" y="102" width="146" height="81" fill="#181D22"/>
+          <rect class="piece c-ecl" x="32" y="187" width="146" height="81" fill="#181D22"/>
+          <rect class="piece c-ecl" x="182" y="187" width="146" height="81" fill="#181D22"/>
+          <line x1="30" y1="185" x2="330" y2="185" stroke="#2A3138" stroke-width="4"/>
+          <line x1="180" y1="100" x2="180" y2="270" stroke="#2A3138" stroke-width="4"/>
+          <g stroke="#3A4047" stroke-width="1.5"><line x1="105" y1="102" x2="105" y2="110"/><line x1="255" y1="102" x2="255" y2="110"/><line x1="105" y1="187" x2="105" y2="195"/><line x1="255" y1="187" x2="255" y2="195"/></g>
+          <circle class="lamp c-ecl" cx="105" cy="115" r="6" fill="#3A3F44"/>
+          <circle class="lamp c-ecl" cx="255" cy="115" r="6" fill="#3A3F44"/>
+          <circle class="lamp c-ecl" cx="105" cy="200" r="6" fill="#3A3F44"/>
+          <circle class="lamp c-ecl" cx="255" cy="200" r="6" fill="#3A3F44"/>
+          <!-- chambre -->
+          <rect x="46" y="156" width="74" height="18" rx="3" fill="#2A3138"/><rect x="46" y="150" width="20" height="10" rx="3" fill="#39424B"/>
+          <rect x="126" y="122" width="44" height="13" rx="3" fill="#D9DDDF"/>
+          <circle class="voyant c-clim" cx="164" cy="128" r="2"/>
+          <g class="souffle c-clim" stroke="#8FC6F0" stroke-width="1.5" fill="none"><path d="M134 140 q3 4 0 8"/><path d="M148 140 q3 4 0 8"/><path d="M162 140 q3 4 0 8"/></g>
+          <text x="40" y="180" fill="#59616A" font-size="9" font-family="Archivo,sans-serif">Chambre</text>
+          <!-- salle de bain -->
+          <rect x="196" y="158" width="70" height="18" rx="8" fill="#2A3138"/>
+          <rect x="292" y="118" width="24" height="46" rx="8" fill="#C9CDD0"/>
+          <circle class="voyant c-eau" cx="304" cy="130" r="2.6"/>
+          <text x="190" y="180" fill="#59616A" font-size="9" font-family="Archivo,sans-serif">Salle de bain</text>
+          <!-- séjour -->
+          <rect class="tv c-pri" x="56" y="210" width="54" height="32" rx="2" fill="#23292F" stroke="#39424B"/>
+          <rect x="120" y="244" width="50" height="16" rx="4" fill="#2A3138"/>
+          <rect x="40" y="252" width="8" height="10" rx="1" fill="#2A3138"/><circle class="voyant c-pri" cx="44" cy="257" r="1.8"/>
+          <text x="40" y="265" fill="#59616A" font-size="9" font-family="Archivo,sans-serif" dx="12">Séjour</text>
+          <!-- cuisine -->
+          <rect x="198" y="226" width="44" height="38" rx="2" fill="#2A3138"/>
+          <rect class="four c-cui" x="204" y="234" width="32" height="16" rx="2" fill="#20252A"/>
+          <rect x="290" y="202" width="28" height="62" rx="3" fill="#D9DDDF"/>
+          <circle class="voyant c-cui" cx="312" cy="212" r="2.2"/>
+          <text x="250" y="265" fill="#59616A" font-size="9" font-family="Archivo,sans-serif">Cuisine</text>
+        </svg>
+      </div>
+      <div>
+        <div class="coffret">
+          <div class="rail" role="group" aria-label="Tableau électrique">
+            <div class="module diff"><div class="row"><button class="levier" data-c="diff" aria-pressed="true" aria-label="Interrupteur différentiel"></button><button class="test" aria-label="Tester le différentiel">T</button></div><small>Différentiel</small><span class="cal">40 A</span></div>
+            <div class="module"><button class="levier" data-c="ecl" aria-pressed="true" aria-label="Disjoncteur éclairage"></button><small>Éclairage</small><span class="cal">10 A</span></div>
+            <div class="module"><button class="levier" data-c="pri" aria-pressed="true" aria-label="Disjoncteur prises"></button><small>Prises</small><span class="cal">16 A</span></div>
+            <div class="module"><button class="levier" data-c="cui" aria-pressed="true" aria-label="Disjoncteur cuisine"></button><small>Cuisine</small><span class="cal">32 A</span></div>
+            <div class="module"><button class="levier" data-c="eau" aria-pressed="true" aria-label="Disjoncteur chauffe-eau"></button><small>Chauffe-eau</small><span class="cal">20 A</span></div>
+            <div class="module"><button class="levier" data-c="clim" aria-pressed="true" aria-label="Disjoncteur climatisation"></button><small>Clim</small><span class="cal">20 A</span></div>
+          </div>
+          <p class="etiquettes" aria-live="polite">Tous les circuits sont alimentés.</p>
+        </div>
+        <p style="color:var(--doux);margin:22px 0 0">Tableaux, coffrets et disjoncteurs BMS : chaque circuit protégé séparément, du logement au chantier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="signaletique">
+  <div class="wrap signal-wrap">
+    <div class="tete" style="margin:0">
+      <h2>Notre plaque signalétique</h2>
+      <p class="lead">Leader du marché algérien quatre ans après sa création. Des produits distribués aujourd’hui dans plusieurs pays.</p>
+    </div>
+    <div class="metal">
+      <div class="grid">
+        <div><strong>2001</strong><span>Début de la fabrication</span></div>
+        <div><strong>24 ans</strong><span>D’expérience</span></div>
+        <div><strong>200+</strong><span>Partenaires</span></div>
+        <div><strong>23</strong><span>Types d’appareillage par gamme</span></div>
+      </div>
+      <div class="bas"><span>ISO 9001:2015</span><span>ISO 14001:2015</span><span>ISO 45001:2018</span><span>IEC CB Test</span><span>CE</span></div>
+    </div>
+    <p style="margin:0"><span class="avalider">Chiffres à valider par l’administration de BMS Electric</span></p>
+  </div>
+</section>
+
+<section class="zone" id="partenaires">
+  <div class="wrap">
+    <div class="tete"><h2>Sur les plus grands chantiers</h2><p class="lead">Entreprises de construction, d’ingénierie et d’architecture partenaires.</p></div>
+  </div>
+  <div class="defile"><div class="piste">
+    <span>CSCEC</span><span>Arab Contractors</span><span>Shapoorji Pallonji</span><span>CGCOC</span><span>Aslan Construction</span><span>Atlas Construction</span><span>Kurd İnşaat</span><span>ZCIGC</span><span>CATIC</span><span>Dekinsan</span><span>ECTURK</span><span>MCC</span>
+    <span aria-hidden="true">CSCEC</span><span aria-hidden="true">Arab Contractors</span><span aria-hidden="true">Shapoorji Pallonji</span><span aria-hidden="true">CGCOC</span><span aria-hidden="true">Aslan Construction</span><span aria-hidden="true">Atlas Construction</span><span aria-hidden="true">Kurd İnşaat</span><span aria-hidden="true">ZCIGC</span><span aria-hidden="true">CATIC</span><span aria-hidden="true">Dekinsan</span><span aria-hidden="true">ECTURK</span><span aria-hidden="true">MCC</span>
+  </div></div>
+  <div class="wrap">
+    <div class="usages">
+      <div class="usage"><svg viewBox="0 0 44 44" fill="none" stroke="#FFC872" stroke-width="2"><rect x="6" y="18" width="32" height="16" rx="3"/><path d="M6 34v4M38 34v4M10 18v-6h10v6"/></svg><div><h3>Hôtellerie</h3><p>Interrupteurs, prises et éclairage pour chambres et parties communes.</p></div></div>
+      <div class="usage"><svg viewBox="0 0 44 44" fill="none" stroke="#FFC872" stroke-width="2"><path d="M6 22 22 8l16 14M10 19v18h24V19"/><rect x="18" y="26" width="8" height="11"/></svg><div><h3>Résidentiel</h3><p>Appareillage design et dispositifs connectés pour villas et logements.</p></div></div>
+      <div class="usage"><svg viewBox="0 0 44 44" fill="none" stroke="#FFC872" stroke-width="2"><path d="M10 38V8h4v30M14 10h24l-6 6M30 10v10"/><rect x="26" y="20" width="8" height="6"/><path d="M4 38h36"/></svg><div><h3>Chantier</h3><p>Coffrets, câblage et protections pour les installations temporaires.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2>Branchons-nous</h2>
+      <p class="lead">Devis, fiches techniques ou réseau de revendeurs : l’équipe commerciale vous répond.</p>
+      <dl>
+        <dt>Showroom</dt><dd>Route de Douéra, Baba Hassen, Alger</dd>
+        <dt>Usine</dt><dd>Rue Hamidi Saïd, Birkhadem, Alger</dd>
+        <dt>Mobile</dt><dd><a href="tel:+213660571693">+213 660 57 16 93</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:contact@bms-electric.com">contact@bms-electric.com</a></dd>
+      </dl>
+      <p style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px">
+        <a class="cta" href="../contact.html">Demander un devis</a>
+        <a class="cta ghost" href="../revendeurs.html">Trouver un revendeur</a>
+      </p>
+    </div>
+    <iframe title="BMS Electric sur la carte" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1131.1814439786901!2d2.9611379337919557!3d36.687379763921626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128faf1151274f85%3A0x25e2503c95ee1ff4!2sBMS%20-%20Electric!5e0!3m2!1sfr!2sdz!4v1747043719644!5m2!1sfr!2sdz"></iframe>
+  </div>
+</section>
+
+<section class="zone fin">
+  <div class="wrap">
+    <h2 style="margin:0 auto 10px">En partant, pensez à éteindre.</h2>
+    <p>Un geste simple, sur une plaque fabriquée à Alger.</p>
+    <button class="petit" aria-label="Éteindre"></button>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© BMS Electric · Maquette de proposition réalisée par Webminds · <a href="../index.html">Version corporate</a></div></footer>
+
+<div class="demo">Maquette de démonstration réalisée par Webminds · aucun formulaire n’est enregistré</div>
+<a class="switcher" href="../index.html"><span class="dot"></span>Découvrir la version corporate</a>
+
+<script src="../assets/js/plates.js"></script>
+<script src="../assets/js/courant.js"></script>
+</body>
+</html>

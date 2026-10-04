@@ -1,0 +1,195 @@
+@font-face{font-family:'Archivo';src:url(../fonts/archivo-wdth.woff2) format('woff2-variations');font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+
+:root{
+  --paper:#F4F5F3;--white:#FFFFFF;--ink:#1D2226;--muted:#59626A;--line:#D8DBD7;
+  --phase:#94491F;--neutre:#2B62A6;--terre-g:#3B8A3E;--terre-j:#E0BC22;
+  --demo-h:34px;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;font-size:17px;line-height:1.55;padding-bottom:var(--demo-h)}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--neutre);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Fil trois conducteurs : la signature graphique */
+.fil{display:flex;flex-direction:column;gap:3px;width:100%}
+.fil i{display:block;height:3px;border-radius:2px}
+.fil i:nth-child(1){background:var(--phase)}
+.fil i:nth-child(2){background:var(--neutre)}
+.fil i:nth-child(3){background:repeating-linear-gradient(115deg,var(--terre-g) 0 14px,var(--terre-j) 14px 22px)}
+
+/* En-tête */
+.top{position:sticky;top:0;z-index:40;background:rgba(244,245,243,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font-stretch:125%;font-weight:850;font-size:24px;letter-spacing:.02em;line-height:1}
+.logo span{font-stretch:75%;font-weight:600;font-size:13px;color:var(--muted);line-height:1.05}
+.nav{display:none;gap:28px}
+.nav a{text-decoration:none;font-weight:550;font-size:15px;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover,.nav a[aria-current]{border-color:var(--phase)}
+.burger{width:44px;height:44px;border:1px solid var(--line);background:var(--white);border-radius:10px;display:grid;place-items:center;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);box-shadow:0 6px 0 var(--ink),0 -6px 0 var(--ink)}
+.menu-mobile{display:none;border-top:1px solid var(--line);background:var(--paper)}
+.menu-mobile.open{display:block}
+.menu-mobile a{display:block;padding:15px 20px;text-decoration:none;font-weight:600;border-bottom:1px solid var(--line)}
+@media (min-width:900px){.nav{display:flex}.burger{display:none}.menu-mobile{display:none!important}}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font:inherit;font-weight:650;font-size:16px;text-decoration:none;cursor:pointer;border:1.5px solid var(--ink);background:var(--ink);color:var(--white)}
+.btn:hover{background:var(--phase);border-color:var(--phase)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--white)}
+
+/* Titres */
+h1,h2,h3{margin:0;font-weight:800;line-height:1.04;letter-spacing:-.01em}
+h1{font-size:clamp(38px,9.6vw,76px);font-stretch:88%}
+h2{font-size:clamp(30px,6.6vw,48px);font-stretch:92%}
+h3{font-size:21px;font-stretch:100%}
+.lead{font-size:clamp(17px,2.1vw,20px);color:var(--muted);max-width:56ch}
+section{padding:72px 0}
+@media (min-width:900px){section{padding:104px 0}}
+.sec-head{display:grid;gap:14px;margin-bottom:36px;max-width:760px}
+
+/* Hero */
+.hero{padding:36px 0 0;position:relative;overflow:hidden}
+.hero-grid{display:grid;gap:30px;align-items:center}
+.hero h1{max-width:13ch}
+.hero .lead{margin:18px 0 26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-stage{position:relative;display:grid;place-items:center;padding:20px 0 0}
+.hero-stage .glow{position:absolute;inset:-10% -30% auto;height:120%;background:radial-gradient(closest-side,rgba(242,170,70,.42),rgba(242,170,70,0));opacity:0;transition:opacity .5s}
+.hero-stage.on .glow{opacity:1}
+.hero-plate{width:min(76vw,330px);position:relative;cursor:pointer;filter:drop-shadow(0 26px 30px rgba(29,34,38,.18)) drop-shadow(0 3px 4px rgba(29,34,38,.12));border:0;background:none;padding:0}
+.hero-plate:active{transform:scale(.985)}
+.hero-hint{font-size:14px;color:var(--muted);margin-top:14px}
+.hero-wires{width:100%;margin-top:34px}
+@media (min-width:900px){
+  .hero{padding-top:70px}
+  .hero-grid{grid-template-columns:1.15fr .85fr}
+  .hero-plate{width:360px}
+}
+
+/* Familles de produits : lignes, pas de cartes */
+.familles{border-top:1px solid var(--line)}
+.famille{display:grid;gap:10px;padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none;align-items:center}
+.famille p{margin:0;color:var(--muted);max-width:60ch}
+.famille .go{font-weight:650;color:var(--phase)}
+.famille .ill{width:86px}
+@media (min-width:900px){.famille{grid-template-columns:110px 1fr 1.4fr auto;gap:28px;padding:30px 0}.famille:hover h3{color:var(--phase)}}
+
+/* Nuancier des gammes */
+.nuancier{scroll-padding-inline:20px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(170px,1fr);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;margin:0 -20px}
+.nuancier a{scroll-snap-align:start;text-decoration:none;display:grid;gap:12px;padding:18px;border-radius:18px;background:var(--white);border:1px solid var(--line)}
+.nuancier a:hover{border-color:var(--ink)}
+.nuancier .plate{filter:drop-shadow(0 8px 10px rgba(0,0,0,.10))}
+.nuancier b{font-size:17px}
+.nuancier small{color:var(--muted);font-size:13px;display:block}
+.illus-note{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* Plaque signalétique (chiffres) */
+.signaletique{background:var(--ink);color:#EEF0EE}
+.signaletique .lead{color:#AEB5BB}
+.nameplate{border:1.5px solid #6F777E;border-radius:10px;display:grid;grid-template-columns:1fr 1fr;margin-top:34px}
+.nameplate div{padding:20px 18px;border-right:1px solid #4A5157;border-bottom:1px solid #4A5157}
+.nameplate div:nth-child(2n){border-right:0}
+.nameplate strong{display:block;font-stretch:115%;font-size:clamp(28px,7vw,44px);font-weight:800;line-height:1}
+.nameplate span{display:block;margin-top:8px;color:#AEB5BB;font-size:14px}
+@media (min-width:900px){.nameplate{grid-template-columns:repeat(4,1fr)}.nameplate div{border-bottom:0}.nameplate div:nth-child(2n){border-right:1px solid #4A5157}.nameplate div:last-child{border-right:0}}
+.certifs{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.certifs span{border:1px solid #6F777E;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600}
+
+/* Pastille chiffres à valider */
+.avalider{display:inline-flex;align-items:center;gap:8px;background:#FFF0DC;color:#8A4A00;border:1px solid #F2B766;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
+.avalider::before{content:"";width:8px;height:8px;border-radius:50%;background:#F08A00}
+.signaletique .avalider{margin-top:16px}
+
+/* Applications */
+.apps{display:grid;gap:18px}
+.app{border-top:3px solid var(--ink);padding-top:16px}
+.app p{color:var(--muted);margin:8px 0 0}
+.app .tags{font-size:14px;color:var(--phase);font-weight:600;margin-top:10px}
+@media (min-width:900px){.apps{grid-template-columns:repeat(3,1fr);gap:34px}}
+
+/* Partenaires */
+.partners{display:flex;flex-wrap:wrap;gap:8px 26px;font-stretch:112%;font-weight:700;font-size:clamp(17px,2.4vw,22px);color:#3B434A}
+.partners span{white-space:nowrap}
+
+/* Bandeau calculateur */
+.calc-teaser{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:18px}
+@media (min-width:900px){.calc-teaser{grid-template-columns:1.4fr auto;align-items:center;padding:40px}}
+
+/* Contact */
+.contact-grid{display:grid;gap:28px}
+.coord dt{font-size:14px;color:var(--muted);margin-top:16px}
+.coord dd{margin:2px 0 0;font-weight:600}
+.coord dd a{text-decoration:none}
+@media (min-width:900px){.contact-grid{grid-template-columns:1fr 1fr;gap:56px}}
+.map{border:0;width:100%;height:340px;border-radius:18px;filter:grayscale(.35)}
+
+/* Formulaires */
+form.fake{display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-size:14px;font-weight:600}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px solid #BFC4BF;border-radius:12px;background:var(--white);color:var(--ink);width:100%}
+.field textarea{min-height:110px;resize:vertical}
+.ok{display:none;background:#E7F3E7;border:1px solid #9BC89C;color:#1F5E22;padding:14px 16px;border-radius:12px;font-weight:600}
+.ok.show{display:block}
+
+/* Pied */
+footer{background:var(--ink);color:#C9CED2;padding:56px 0 40px;font-size:15px}
+footer .wrap{display:grid;gap:26px}
+footer a{text-decoration:none}
+footer .logo b{color:#fff}
+footer small{color:#8C949B}
+@media (min-width:900px){footer .wrap{grid-template-columns:1.4fr 1fr 1fr}}
+
+/* Bandeau démo + pastille */
+.demo{position:fixed;left:0;right:0;bottom:0;height:var(--demo-h);z-index:90;background:#1D2226;color:#E8EBE8;font-size:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 10px;line-height:1.2}
+.switcher{position:fixed;left:14px;bottom:calc(var(--demo-h) + 14px);z-index:95;display:flex;align-items:center;gap:10px;padding:10px 16px 10px 10px;border-radius:999px;background:#1D2226;color:#fff;text-decoration:none;font-weight:650;font-size:14px;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.switcher .dot{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFD48A,#F08A00);box-shadow:0 0 0 0 rgba(240,138,0,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(240,138,0,.55)}70%{box-shadow:0 0 0 14px rgba(240,138,0,0)}100%{box-shadow:0 0 0 0 rgba(240,138,0,0)}}
+
+/* Pages intérieures */
+.page-head{padding:44px 0 30px}
+.page-head .lead{margin-top:14px}
+.crumb{font-size:14px;color:var(--muted);margin-bottom:14px}
+.crumb a{text-decoration:none}
+
+/* Gammes page */
+.gamme-row{display:grid;gap:22px;padding:34px 0;border-top:1px solid var(--line);align-items:center}
+.gamme-row .ill{max-width:320px}
+.gamme-row ul{margin:12px 0 0;padding-left:18px;color:var(--muted)}
+@media (min-width:900px){.gamme-row{grid-template-columns:320px 1fr;gap:60px}}
+
+/* Fiche produit */
+.fiche{display:grid;gap:30px}
+.configur{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:22px;display:grid;gap:18px;place-items:center}
+.configur .plate{width:min(100%,420px);filter:drop-shadow(0 18px 22px rgba(0,0,0,.14))}
+.choix{display:flex;flex-wrap:wrap;gap:8px}
+.choix button{font:inherit;font-size:14px;font-weight:600;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #BFC4BF;background:var(--white);cursor:pointer;color:var(--ink)}
+.choix button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.refs{width:100%;border-collapse:collapse;font-size:15px}
+.refs th,.refs td{text-align:left;padding:12px 8px;border-bottom:1px solid var(--line)}
+.refs th{font-size:13px;color:var(--muted);font-weight:600}
+.refs td:first-child{font-weight:750;white-space:nowrap}
+.tbl-wrap{overflow-x:auto}
+@media (min-width:900px){.fiche{grid-template-columns:1fr 1fr;gap:56px;align-items:start}.configur{position:sticky;top:90px}}
+
+/* Calculateur */
+.calc{display:grid;gap:26px}
+.steppers{display:grid;gap:12px}
+.stepper{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:10px 12px 10px 16px}
+.stepper b{font-weight:600}
+.stepper .ctl{display:flex;align-items:center;gap:6px}
+.stepper button{width:40px;height:40px;border-radius:50%;border:1px solid #BFC4BF;background:var(--paper);font:inherit;font-size:20px;cursor:pointer;color:var(--ink)}
+.stepper output{min-width:28px;text-align:center;font-weight:800;font-size:18px}
+.resultat{background:var(--ink);color:#fff;border-radius:22px;padding:24px}
+.resultat ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
+.resultat li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #3D454C;padding-bottom:10px}
+.resultat li strong{font-size:22px;font-stretch:115%}
+.resultat small{display:block;color:#AEB5BB;margin-top:14px}
+@media (min-width:900px){.calc{grid-template-columns:1fr 1fr;gap:48px;align-items:start}}
